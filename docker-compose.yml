@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   reverseproxy:
-    build: ./udagram-reverseproxy
+    image: udagram-reverseproxy:elcharitas
     ports:
         - 8080:8080
     restart: always
@@ -9,11 +9,11 @@ services:
       - api-user
       - api-feed
   frontend:
-    build: ./udagram-frontend
+    image: udagram-frontend:elcharitas
     ports:
       - "3000:80"
   api-user:
-    build: ./udagram-api-user
+    image: udagram-api-user:elcharitas
     environment:
       URL: "http://localhost:3000"
       AWS_REGION: $AWS_REGION 
@@ -25,7 +25,7 @@ services:
       POSTGRES_HOST: $POSTGRES_HOST
       JWT_SECRET: $JWT_SECRET
   api-feed:
-    build: ./udagram-api-feed
+    image: udagram-api-feed:elcharitas
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
