@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   reverseproxy:
-    image: elcharitas/reverseproxy
+    image: elcharitas/reverseproxy:v1
     ports:
         - 8080:8080
     restart: always
@@ -9,7 +9,7 @@ services:
       - api-user
       - api-feed
   frontend:
-    image: elcharitas/udagram-frontend
+    image: elcharitas/udagram-frontend:v1
     ports:
       - "3000:80"
   api-user:
