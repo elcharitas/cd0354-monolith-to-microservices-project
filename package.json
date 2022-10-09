@@ -1,0 +1,13 @@
+{
+    "name": "cd0354-monolith-to-microservices-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "export $(cat .env | xargs) && export $(cat .env.local | xargs) && docker-compose up",
+        "build:images": "docker-compose -f docker-compose-build.yaml build --parallel"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
