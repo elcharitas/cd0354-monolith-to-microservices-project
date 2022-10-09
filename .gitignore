@@ -43,3 +43,6 @@ venv/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# kube yaml secrets
+*-secret.yaml
