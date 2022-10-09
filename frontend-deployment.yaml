@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: elcharitas/udagram-frontend:v1
+        image: elcharitas/udagram-frontend:v3
         ports: 
         - containerPort: 80
         resources:
