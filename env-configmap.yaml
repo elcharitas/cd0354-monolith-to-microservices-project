@@ -1,1 +1,9 @@
-URL: "http://localhost:8100"
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-map
+data:
+  URL: "http://localhost:3000"
+  AWS_BUCKET: arn:aws:s3:::elcharitas-cloud-dev
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default

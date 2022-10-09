@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-feed
+spec:
+  selector:
+    matchLabels:
+      run: api-feed
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: api-feed
+    spec:
+      containers:
+      - name: api-feed
+        image: elcharitas/udagram-api-feed:v1
+        ports: 
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
