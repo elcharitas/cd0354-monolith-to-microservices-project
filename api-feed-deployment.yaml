@@ -15,6 +15,32 @@ spec:
       containers:
       - name: api-feed
         image: elcharitas/udagram-api-feed:v1
+        env:
+          - name: POSTGRES_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: env-secrets
+                key: POSTGRES_HOST
+          - name: POSTGRES_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: env-secrets
+                key: POSTGRES_USERNAME
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: env-secrets
+                key: POSTGRES_PASSWORD
+          - name: POSTGRES_DB
+            valueFrom:
+              configMapKeyRef:
+                name: env-secrets
+                key: POSTGRES_DB
+          - name: JWT_SECRET
+            valueFrom:
+              configMapKeyRef:
+                name: env-secrets
+                key: JWT_SECRET
         resources:
           requests:
             memory: "100Mi"
