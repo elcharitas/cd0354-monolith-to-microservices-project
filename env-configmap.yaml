@@ -4,6 +4,6 @@ metadata:
   name: env-map
 data:
   URL: "http://localhost:3000"
-  AWS_BUCKET: arn:aws:s3:::elcharitas-monolith-app
+  AWS_BUCKET: arn:aws:s3:::elcharitas-monolith-to-serverless
   AWS_REGION: us-east-1
   AWS_PROFILE: default
